@@ -2,7 +2,16 @@ import React from 'react';
 
 
 const Search =()=>{
- return <h1>Search</h1>
+ return (
+     <div>
+         <div className="ui form">
+             <div className="field">
+                 <label>Enter Search Term</label>
+                <input className="input"/>
+            </div>
+         </div>
+     </div>
+ )
 }
 
 
