@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, {useState, useEffect} from 'react';
 
 
@@ -5,8 +6,11 @@ const Search =()=>{
    const [term, setTerm]= useState('');
 
    useEffect(()=>{
-        console.log('I ONLY RUN AT EVERY RENDER AND INITIAL RERENDER');
-   },[term])
+       (async () =>{
+       await axios('dfskgf');
+       })();
+    },
+    [term]);
  return (
      <div>
          <div className="ui form">
