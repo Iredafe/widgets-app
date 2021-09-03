@@ -5,8 +5,8 @@ const Search =()=>{
    const [term, setTerm]= useState('');
 
    useEffect(()=>{
-        console.log('kdjkghsglk');
-   })
+        console.log('I ONLY RUN AT EVERY RENDER AND INITIAL RERENDER');
+   },[term])
  return (
      <div>
          <div className="ui form">
@@ -23,4 +23,4 @@ const Search =()=>{
 }
 
 
-export default Search;
+export default Search; 
