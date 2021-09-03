@@ -6,9 +6,10 @@ const Search =()=>{
    const [term, setTerm]= useState('');
 
    useEffect(()=>{
-       (async () =>{
-       await axios('dfskgf');
-       })();
+       const search = async ()=>{
+           await axios.get('dfsgs')
+       }
+       search()
     },
     [term]);
  return (
