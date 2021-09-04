@@ -23,18 +23,16 @@ const Search =()=>{
     },
     [term]);
 
-    const renderedResults = results.map((result)=>{
-        return(
-            <div className="item">
-                <div className="content">
-                <div className="header">{result.title}
-                </div>
-                {result.snippet}
+    const renderedResults = results.map((result) => {
+        return (
+          <div key={result.pageid} className="item">
+            <div className="content">
+              <div className="header">{result.title}</div>
+              <span dangerouslySetInnerHTML={{ __html: result.snippet }}></span>
             </div>
-            </div>
-
-        )
-    });
+          </div>
+        );
+      });
     
     return (
         <div>
