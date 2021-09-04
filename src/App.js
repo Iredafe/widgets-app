@@ -20,6 +20,7 @@ const items =[
 export default ()=>{
     return (<div>
        <Search/>
+       <Accordion/>
     </div>);        
 
 };
