@@ -19,7 +19,9 @@ const Search =()=>{
            });
            setResults(data.query.search);
        };
+       if(term){
         search();
+       }
     },
     [term]);
 
