@@ -3,9 +3,10 @@ import React from "react";
 const Dropdown = ({options, selected, onSelectionChange}) =>{
 
     const renderedOptions = options.map((option)=>{
-        console.log({option})
         return (
-            <div key={option.value}  className="item">{option.label}</div>
+            <div key={option.value}  
+            className="item"
+            onClick={()=>onSelectionChange(option)}>{option.label}</div>
         );
     });
     return (<div className="ui form">
