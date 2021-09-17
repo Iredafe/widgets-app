@@ -37,7 +37,9 @@ export default ()=>{
 
     const [selected, setSelected] = useState(options[0]);
     return (<div>
-       <Dropdown selected={selected} options={options}/>
+       <Dropdown selected={selected} 
+       onSelectionChange={setSelected} 
+       options={options}/>
     </div>);        
 
 };
