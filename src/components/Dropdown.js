@@ -1,6 +1,6 @@
 import React from "react";
 
-const Dropdown = ({options}) =>{
+const Dropdown = ({options, selected}) =>{
 
     const renderedOptions = options.map((option)=>{
         return (
