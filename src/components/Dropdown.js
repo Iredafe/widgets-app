@@ -6,7 +6,7 @@ const Dropdown = ({options}) =>{
         return (
             <div key={option.value}  className="item">{option.label}</div>
         );
-    })
+    });
     return (<div className="ui form">
         <div className="field">
         <label className="label">Select a Color</label>
@@ -18,8 +18,7 @@ const Dropdown = ({options}) =>{
             </div>
         </div>
         </div>
-        </div>)
-        ;
+        </div>)   
 };
 
 export default Dropdown;
