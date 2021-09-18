@@ -3,6 +3,9 @@ import React from "react";
 const Dropdown = ({options, selected, onSelectionChange}) =>{
 
     const renderedOptions = options.map((option)=>{
+        if(options.value===selected.value){
+            return null;
+        }
         return (
             <div key={option.value}  
             className="item"
