@@ -3,9 +3,7 @@ import React from "react";
 const Dropdown = ({options, selected, onSelectionChange}) =>{
 
     const renderedOptions = options.map((option)=>{
-        console.log(selected.value);
-        console.log(option.value)
-        if(options.value===selected.value){
+        if(option.value===selected.value){
             return null;
         }
         return (
