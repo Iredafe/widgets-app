@@ -15,7 +15,8 @@ const [open, setOpen]= useState(false);
     return (<div className="ui form">
         <div className="field">
         <label className="label">Select a Color</label>
-        <div className={`ui selection dropdown ${open? 'visible active': ''}`}>
+        <div onClick={()=> setOpen(!open)}
+        className={`ui selection dropdown ${open ? 'visible active': ''}`}>
             <i className="dropdown icon"></i>
             <div className="text">{selected.label}</div>
             <div className={`menu ${open ? 'visible transition' :''}`}>
