@@ -1,6 +1,20 @@
 import React from "react";
 import Dropdown from "./Dropdown";
 
+const options = [
+    {
+        label: 'Afrikaans',
+        value: 'af'
+    },
+    {
+        label:'Arabic',
+        value: 'ar'
+    },
+    {
+        label:'hindi',
+        value:'hi'
+    }
+]
 
 const Translate=()=>{
 return <div>
