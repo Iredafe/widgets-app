@@ -14,7 +14,7 @@ useEffect(()=>{
     document.body.addEventListener('click', onBodyClick);
 
     return ()=>{
-        document.body.removeEventListener('click', onBodyClick);
+        document.body.removeEventListener('click', onBodyClick)
     }
 }, []);
 

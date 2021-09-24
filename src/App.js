@@ -40,7 +40,7 @@ export default ()=>{
 
     return (<div>
       {showDropdown? (<Dropdown selected={selected} 
-      onSelectionChange={setSelected} 
+      onSelectedChange={setSelected} 
        options={options}/>): null}
     </div>);        
 
