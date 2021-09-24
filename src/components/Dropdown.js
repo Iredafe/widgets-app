@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 
-const Dropdown = ({options, selected, onSelectionChange}) =>{
+const Dropdown = ({options, selected, onSelectedChange}) =>{
 const [open, setOpen]= useState(false);
 const ref = useRef();
 
@@ -26,7 +26,7 @@ useEffect(()=>{
     return (
             <div key={option.value}  
             className="item"
-            onClick={()=>onSelectionChange(option)}>{option.label}</div>
+            onClick={()=>onSelectedChange(option)}>{option.label}</div>
         );
     });
     
