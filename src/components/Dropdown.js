@@ -2,11 +2,12 @@ import React, { useEffect, useState, useRef } from "react";
 
 const Dropdown = ({label, options, selected, onSelectedChange}) =>{
 const [open, setOpen]= useState(false);
-const ref = useRef();
+const ref = useRef(null);
 
 useEffect(()=>{
     const onBodyClick=(event)=>{
-        if (ref.current && ref.current.contains(event.target)) {
+        console.log(ref);
+        if (ref.current.contains(event.target)) {
             return;
           }
         setOpen(false);        

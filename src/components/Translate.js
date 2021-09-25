@@ -17,9 +17,9 @@ const options = [
 ]
 
 const Translate=()=>{
-    const [language, setLanguage]= useState[options[0]]
-return 
-(<div>
+    const [language, setLanguage]= useState(options[0]);
+return (
+<div>
 <Dropdown
 label="Select a Language"
 options={options} 
