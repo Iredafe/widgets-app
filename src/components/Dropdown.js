@@ -2,12 +2,11 @@ import React, { useEffect, useState, useRef } from "react";
 
 const Dropdown = ({label, options, selected, onSelectedChange}) =>{
 const [open, setOpen]= useState(false);
-const ref = useRef(null);
+const ref = useRef();
 
 useEffect(()=>{
     const onBodyClick=(event)=>{
-        console.log(ref);
-        if (ref.current.contains(event.target)) {
+        if (ref.current && ref.current.contains(event.target)) {
             return;
           }
         setOpen(false);        
@@ -31,7 +30,7 @@ useEffect(()=>{
         );
     });
     
-    return (<div className="ui form">
+    return (<div ref={ref} className="ui form">
         <div className="field">
         <label className="label">{label}</label>
         <div onClick={()=> setOpen(!open)}
