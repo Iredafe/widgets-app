@@ -2,7 +2,7 @@ import axios from "axios";
 import React, {useState, useEffect} from "react";
 
 const Convert=({language, text})=>{
-const [translation, setTranslation]=useState('');
+const [translated, setTranslated]=useState('');
     useEffect(()=>{
         const doTranslation = async()=>{
             const {data} = await  axios.post('https://translation.googleapis.com/language/translate/v2', {}, {
@@ -13,11 +13,14 @@ const [translation, setTranslation]=useState('');
                 }
             });
 
-            setTranslation(data.data.translations[0].translatedText);
-        }      
+            setTranslated(data.data.translations[0].translatedText);
+        }     
+        doTranslation(); 
     },[language, text]);
 
-return <div/>
+return (
+    <div className="ui header">{translated}</div>
+)
 }
 
 export default Convert;
