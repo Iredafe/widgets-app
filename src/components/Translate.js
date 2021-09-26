@@ -2,7 +2,6 @@ import React, {useState} from "react";
 import Convert from "../Convert";
 import Dropdown from "./Dropdown";
 
-//AIzaSyCHUCmpR7cT_yDFHC98CZJy2LTms-IwDlM
 const options = [
     {
         label: 'Afrikaans',
