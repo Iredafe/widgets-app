@@ -3,6 +3,15 @@ import React, {useState, useEffect} from "react";
 
 const Convert=({language, text})=>{
 const [translated, setTranslated]=useState('');
+const [debouncedText, setDebouncedText]=useState(text);
+
+    useEffect(()=>{
+        const timerId = setTimeout(()=>{
+
+        }, 500);
+    },[text])
+
+
     useEffect(()=>{
         const doTranslation = async()=>{
             const {data} = await  axios.post('https://translation.googleapis.com/language/translate/v2', {}, {
