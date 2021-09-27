@@ -57,7 +57,8 @@ const showDropdown = () =>{
 }
 
 export default ()=>{
-    return (<div>
+    return (
+    <div>
   {showAccordion()}
   {showDropdown()}
   {showList()}
