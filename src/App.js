@@ -40,6 +40,16 @@ const showAccordion = () => {
   }
 }
 
+const showTranslate =()=>{
+  if(window.location.pathname==='/translate'){
+    return <Translate/>
+  }
+}
+const showList =()=>{
+  if(window.location.pathname==='/list'){
+    return <Search/>
+  }
+}
 const showDropdown = () =>{
   if(window.location.pathname==='/dropdown'){
     return <Dropdown/>;
@@ -50,6 +60,8 @@ export default ()=>{
     return (<div>
   {showAccordion()}
   {showDropdown()}
+  {showList()}
+  {showTranslate()}
     </div>);        
 
 };
