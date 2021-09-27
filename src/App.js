@@ -34,11 +34,22 @@ const options = [
     },
   ];
 
+const showAccordion = () => {
+  if(window.location.pathname === '/'){
+    return <Accordion items={items}/>
+  }
+}
+
+const showDropdown = () =>{
+  if(window.location.pathname==='/dropdown'){
+    return <Dropdown/>;
+  }
+}
+
 export default ()=>{
-
-
     return (<div>
-  <Translate/>
+  {showAccordion()}
+  {showDropdown()}
     </div>);        
 
 };
