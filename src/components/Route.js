@@ -1,19 +1,24 @@
 import { useEffect } from "react";
+import { useState } from "react/cjs/react.development";
 
 const Route=({path, children})=>{
 
-    useEffect(()=>{
+    const [currentPath, setCurrentPath] = useState(window.location.pathname);
+
+     useEffect(()=>{
 
        const onLocationChange =()=>{
-            console.log("Location Changed")
-       }
+
+        setCurrentPath(window.location.pathname);
+
+    }
         window.addEventListener('popstate', onLocationChange)
         
         return()=>{
             window.removeEventListener('popstate', onLocationChange);;;
         }
     },[]);
-    return window.location.pathname===path ? children : null;
+    return currentPath===path ? children : null;
 };
 
 export default Route;
