@@ -6,12 +6,12 @@ const Header=()=>{
             <a href="/" className="item">
                Accordion
             </a>
-            <a href="/" className="item">
+            <a href="/list" className="item">
                Search
             </a>
-            <a href="/" className="item">
+            <a href="/dropdown" className="item">
                Dropdown
-            </a><a href="/" className="item">
+            </a><a href="/translate" className="item">
                Translate
             </a>
         </div>
